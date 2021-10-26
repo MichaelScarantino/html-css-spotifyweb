@@ -27,14 +27,20 @@ footer{
 
 /* Main icon */
 .main-icon{
-    width: 40px;
+    width: 25px;
     height: auto;
 }
 
-/* Height 100px */
+/* Small incon */
+.small-icon{
+    width: 10px;
+    height: auto;
+}
+
+/* Height 80px */
 .upgrade,
 footer{
-    height: 100px;
+    height: 80px;
 }
 
 /* Upgrade */
@@ -42,7 +48,7 @@ footer{
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
     background-color: rgba(0, 0, 0, 0.5);
     text-align: right;
 }
@@ -55,7 +61,7 @@ footer{
 .btn-white{
     display: inline-block;
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     text-decoration: none;
     border: 1px solid white;
     padding: 10px 20px;
@@ -65,7 +71,7 @@ footer{
 
 /* MAIN */
 main{
-    height: calc(100% - 100px);
+    height: calc(100% - 80px);
     overflow: hidden;
 
     /* TEST */
@@ -77,13 +83,13 @@ main{
     display: flex;
     flex-direction: column;
     float: left;
-    width: 250px;
+    width: 200px;
     min-height: 300px;
     overflow: hidden;
-    padding:10px;
-
-    /* TEST */
-    background-color: royalblue;
+    padding:10px 10px 0 10px;
+    font-size: 10px;
+    color: gray;
+    background-color: black;
 }
 
 /* Main height 100% */
@@ -92,18 +98,29 @@ main{
     height: 100%;
 }
 
+.nav-main ul li{
+    list-style-type: none;
+}
+
+.nav-main a{
+    text-decoration: none;
+    color: gray;
+}
+
+.nav-main img{
+    vertical-align: middle;
+    filter: invert(0.5);
+}
+
 /* Logo */
-.logo{
-
-
-    /* TEST */
-    background-color: cyan;
+.logo img{
+    padding: 10px 0;
+    filter: invert(0);
 }
 
 .spotify-logo{
     width: 150px;
     height: auto;
-    
 }
 
 .spotify-icon{
@@ -112,54 +129,81 @@ main{
 
 /* Nav actions */
 .nav-actions{
+    padding-top: 10px;
+}
 
 
-    /* TEST */
-    background-color:lightgreen;
 
+.nav-actions ul li{
+    padding-bottom: 10px;
 }
 
 /* Playlists */
 .playlists{
     flex-grow: 1;
     overflow: hidden;
+    padding-top: 10px;
+}
 
-    /* TEST */
-    background-color:lightgrey;
+.playlists h3{
+    color: white;
+    font-size: 12px;
+}
 
+.create-playlist{
+    padding: 10px 0;
+}
+
+.plus i{
+    color: black;
+    background-color: grey;
+    padding: 7px;
+    margin-right: 5px;
 }
 
 .playlists-name{
-    list-style-type: none;
     overflow-y: auto;
     height: 70%;
-}
-
-.playlists-name li{
-    
+    line-height: 25px;
 }
 
 /* User and install */
-.user-and-install{
+.install-app{
+    padding-bottom: 7px;
+    border-bottom: 1px solid grey;
+}
+
+.username{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.username img{
+    filter: invert(0);
+    background-color: grey;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     
+}
 
+.username span{
+    color: white;
+    font-weight: 700;
+}
 
-
-    /* TEST */
-    background-color:lightpink;
-
+.user-and-install img{
+    margin-right: 5px;
 }
 
 
 /* Main content */
 .main-content{
     float: left;
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
     overflow-y: auto;
     padding-top: 120px;
-
-    /* TEST */
-    background-color: crimson;
+    background-color: #141922;
 }
 
 
@@ -167,17 +211,26 @@ main{
 @media screen and (max-width:600px) {
     /* Nav main */
     .nav-main{
-        width: 80px;
+        width: 60px;
+        text-align: center;
+    }
+
+    .nav-main span{
+        display: none;
     }
 
     /* Main content */
     .main-content{
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
+    }
+
+    .nav-actions{
+        flex-grow: 1;
     }
 
     /* Upgrade */
     .upgrade{
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
     }
 
     /* Logo */
@@ -186,9 +239,18 @@ main{
     }
     
     .spotify-icon{
-        display: block;
+        display: inline-block;
     }
     
+    /* Playlists */
+    .playlists{
+        display: none;
+    }
+
+    .install-app{
+        border: none;
+    }
+
 }
 
 
@@ -196,7 +258,5 @@ main{
 /* FOOTER */
 footer{
     overflow: hidden;
-
-    /* TEST */
-    background-color: bisque;
+    background-color: #282828;
 }
