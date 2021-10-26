@@ -1,0 +1,127 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Web app wrapper  */
+.web-wrapper{
+    height: 100vh;
+
+    /* TEST */
+    background-color: aquamarine;
+}
+
+/* Width 100% */
+.width-vw{
+    width: 100%;
+}
+
+/* Upgrade */
+.upgrade{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 250px);
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* MAIN */
+main{
+    height: calc(100% - 100px);
+    overflow: hidden;
+
+    /* TEST */
+    background-color: coral;
+}
+
+/* Nav main */
+.nav-main{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 250px;
+    height: 100%;
+    min-height: 300px;
+    overflow: hidden;
+
+    /* TEST */
+    background-color: royalblue;
+}
+
+/* Logo */
+.logo{
+
+
+    /* TEST */
+    background-color: cyan;
+}
+
+/* Nav actions */
+.nav-actions{
+
+
+    /* TEST */
+    background-color:lightgreen;
+
+}
+
+/* Playlists */
+.playlists{
+    flex-grow: 1;
+    overflow: hidden;
+
+    /* TEST */
+    background-color:lightgrey;
+
+}
+
+.playlists-name{
+    list-style-type: none;
+    overflow-y: auto;
+    height: 70%;
+}
+
+.playlists-name li{
+    
+}
+
+/* User and install */
+.user-and-install{
+    
+
+
+
+    /* TEST */
+    background-color:lightpink;
+
+}
+
+
+/* Main content */
+.main-content{
+    float: left;
+    width: calc(100% - 250px);
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 120px;
+
+    /* TEST */
+    background-color: crimson;
+}
+
+/* FOOTER */
+footer{
+    height: 100px;
+    overflow: hidden;
+
+    /* TEST */
+    background-color: bisque;
+}
