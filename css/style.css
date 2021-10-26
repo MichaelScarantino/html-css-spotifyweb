@@ -19,8 +19,22 @@ body{
 }
 
 /* Width 100% */
-.width-vw{
+.web-wrapper,
+main,
+footer{
     width: 100%;
+}
+
+/* Main icon */
+.main-icon{
+    width: 40px;
+    height: auto;
+}
+
+/* Height 100px */
+.upgrade,
+footer{
+    height: 100px;
 }
 
 /* Upgrade */
@@ -29,9 +43,25 @@ body{
     top: 0;
     right: 0;
     width: calc(100% - 250px);
-    height: 100px;
     background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
 }
+
+.button-upgrade{
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.btn-white{
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
 
 /* MAIN */
 main{
@@ -48,12 +78,18 @@ main{
     flex-direction: column;
     float: left;
     width: 250px;
-    height: 100%;
     min-height: 300px;
     overflow: hidden;
+    padding:10px;
 
     /* TEST */
     background-color: royalblue;
+}
+
+/* Main height 100% */
+.nav-main,
+.main-content{
+    height: 100%;
 }
 
 /* Logo */
@@ -62,6 +98,16 @@ main{
 
     /* TEST */
     background-color: cyan;
+}
+
+.spotify-logo{
+    width: 150px;
+    height: auto;
+    
+}
+
+.spotify-icon{
+    display: none;
 }
 
 /* Nav actions */
@@ -109,7 +155,6 @@ main{
 .main-content{
     float: left;
     width: calc(100% - 250px);
-    height: 100%;
     overflow-y: auto;
     padding-top: 120px;
 
@@ -117,9 +162,39 @@ main{
     background-color: crimson;
 }
 
+
+
+@media screen and (max-width:600px) {
+    /* Nav main */
+    .nav-main{
+        width: 80px;
+    }
+
+    /* Main content */
+    .main-content{
+        width: calc(100% - 80px);
+    }
+
+    /* Upgrade */
+    .upgrade{
+        width: calc(100% - 80px);
+    }
+
+    /* Logo */
+    .spotify-logo{
+        display: none;
+    }
+    
+    .spotify-icon{
+        display: block;
+    }
+    
+}
+
+
+
 /* FOOTER */
 footer{
-    height: 100px;
     overflow: hidden;
 
     /* TEST */
