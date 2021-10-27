@@ -25,6 +25,14 @@ body{
     color: grey;
 }
 
+h2{
+    font-size: 25px;
+}
+
+h3{
+    font-size: 14px;
+}
+
 /* Link decorations */
 a{
     color: grey;
@@ -95,9 +103,6 @@ footer{
 main{
     height: calc(100% - 80px);
     overflow: hidden;
-
-    /* TEST */
-    background-color: coral;
 }
 
 /* Nav main */
@@ -108,7 +113,6 @@ main{
     width: 200px;
     min-height: 300px;
     overflow: hidden;
-    padding:10px 10px 0 10px;
     background-color: black;
 }
 
@@ -121,6 +125,13 @@ main{
 .nav-main img{
     vertical-align: middle;
     filter: invert(0.5);
+}
+
+.logo img,
+.nav-actions a,
+.playlists,
+.user-and-install{
+    padding-left: 10px;
 }
 
 /* Logo */
@@ -140,12 +151,16 @@ main{
 
 /* Nav actions */
 .nav-actions{
-    padding-top: 10px;
+    margin-top: 10px;
     font-size: 12px;
 }
 
 .nav-actions ul li{
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-actions ul li:first-child{
+    border-left: 3px solid #a1ee2f;
 }
 
 /* Playlists */
@@ -157,7 +172,6 @@ main{
 
 .playlists h3{
     color: white;
-    font-size: 12px;
 }
 
 .create-playlist{
@@ -226,6 +240,20 @@ main{
 
 .nav-content ul li{
     padding: 20px;
+    position: relative;
+}
+
+.nav-content .underline::after{
+    content:'';
+    width: 30px;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #a1ee2f;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
 }
 
 /* Recently played */
@@ -237,7 +265,6 @@ main{
 .recently-music{
     display: flex;
     justify-content: space-around;
-    background-color: coral;
 }
 
 .recently-content{
@@ -250,38 +277,72 @@ main{
     padding-top: 10px;
 }
 
-.recently-content img{
+.recently-content img, 
+.music-content img{
     padding: 20px 0;
 }
 
+/* Create for and Popular artists */
 
-.create-for h2{
-    padding-top: 20px;
-}
-
-.create-for p{
-    padding: 10px 0;
-}
-
-/* Create for */
-.create-for{
-    background-color: aquamarine;
-}
-.create-music{
+.row-music{
     display: flex;
     justify-content: space-around;
-    background-color: chocolate;
     width: calc(100% / 3);
 }
 
-.create-content{
+.music-content{
     width: calc( (100% / 2) - 10px);
     padding-right: 10px;
     text-align: center;
 }
 
+.create-for h2,
+.popular-artists h2{
+    padding-top: 30px;
+}
 
-@media screen and (max-width:600px) {
+.create-for p,
+.popular-artists p{
+    padding-top: 10px;
+}
+
+.br-radius{
+    border-radius: 50%;
+}
+
+@media screen and (max-width:700px) {
+    /* Recently played */
+    .recently-music{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+
+    .recently-content{
+        width: calc( (100% / 4) - 10px);
+    }
+
+    /* Create for and Popular artists */
+
+    .row-music{
+        width: calc(100% / 2);
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:601px) {
+    /* Recently played */
+    .recently-content{
+        width: calc( (100% / 2) - 10px);
+    }
+
+    .row-music{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:599px) {
     /* Nav main */
     .nav-main{
         width: 60px;
@@ -299,6 +360,14 @@ main{
 
     .nav-actions{
         flex-grow: 1;
+    }
+
+    .nav-actions a{
+        padding: 0;
+    }
+
+    .nav-actions ul li:first-child{
+        border-left:none;
     }
 
     /* Upgrade */
@@ -322,6 +391,11 @@ main{
 
     .install-app{
         border: none;
+    }
+
+    /* Recently played */
+    .recently-content{
+        width: calc( (100% / 2) - 10px);
     }
 
 }
