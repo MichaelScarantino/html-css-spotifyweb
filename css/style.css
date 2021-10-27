@@ -400,10 +400,63 @@ main{
 
 }
 
-
-
 /* FOOTER */
 footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     background-color: #282828;
 }
+
+footer h3{
+    font-size: 12px;
+}
+
+/* Song footer */
+.song-footer{
+    display: flex;
+    align-items: center;
+}
+
+.song-footer img{
+    width: 50px;
+    margin: 0 10px;
+}
+
+.piece-name .clr-grey{
+    font-size: 10px;
+}
+
+.footer-icon{
+    padding-left: 30px;
+}
+
+.footer-icon i{
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+
+/* Multimedia footer */
+.multimedia-footer ul{
+    display: flex;
+    align-items: center;
+    background-color: purple;
+}
+
+.multimedia-footer i{
+    font-size: 20px;
+    padding: 0 10px;
+
+}
+
+.play-btn i{
+    font-size: 30px;
+}
+
+/* Screen and audio options */
+.screen-and-audio-options{
+    background-color: rebeccapurple;
+}
+
