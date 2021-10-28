@@ -101,6 +101,10 @@ footer{
     display: none;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 /* Upgrade */
 .upgrade{
     position: fixed;
@@ -378,6 +382,8 @@ main{
     padding-top: 20px;
 }
 
+
+
 @media screen and (max-width:700px) {
     /* Recently played */
     .recently-music{
@@ -499,9 +505,17 @@ footer h4{
     padding-right: 30px;
 }
 
+.piece-name span:hover{
+    color: white;
+    text-decoration: underline;
+}
+
 .footer-icon i{
     font-size: 14px;
     padding-right: 10px;
+}
+.song-footer .footer-icon i:hover{
+    color: white;
 }
 
 
@@ -524,6 +538,10 @@ footer h4{
     font-size: 30px;
 }
 
+.play-btn i:hover{
+    transform: scale(1.1);
+}
+
 .multimedia-line{
     padding-top: 10px;
 }
@@ -537,9 +555,20 @@ footer h4{
 }
 
 .line-advancement{
+    position: relative;
     width: 30%;
     height: 3px;
     background-color: #c1c1c1;
+}
+
+.circle{
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
 }
 
 /* Screen and audio options */
@@ -553,3 +582,12 @@ footer h4{
     background-color: grey;
 }
 
+.line-duration:hover .line-advancement,
+.line-sound:hover .line-advancement {
+    background-color: #a1ee2f;
+}
+
+.line-duration:hover .circle,
+.line-sound:hover .circle{
+    display: block;
+}
