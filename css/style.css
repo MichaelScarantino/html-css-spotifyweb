@@ -15,9 +15,17 @@ body{
 /* Web app wrapper  */
 .web-wrapper{
     height: 100vh;
+}
 
-    /* TEST */
-    background-color: aquamarine;
+/* Display flex and align-items*/
+.flex-align{
+    display: flex;
+    align-items: center;
+}
+
+/* overflow */
+.overf-h{
+    overflow: hidden;
 }
 
 /* Color grey */
@@ -25,6 +33,7 @@ body{
     color: grey;
 }
 
+/* Text */
 h2{
     font-size: 25px;
 }
@@ -37,6 +46,9 @@ h3{
 a{
     color: grey;
     text-decoration: none;
+}
+a:hover{
+    color: white;
 }
 
 /* List style */
@@ -74,6 +86,21 @@ footer{
     height: 80px;
 }
 
+.br-radius{
+    border-radius: 50%;
+}
+
+/* Layover */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
 /* Upgrade */
 .upgrade{
     position: fixed;
@@ -98,11 +125,14 @@ footer{
     border-radius: 20px;
 }
 
+.btn-white:hover{
+    transform: scale(1.1);
+}
+
 
 /* MAIN */
 main{
     height: calc(100% - 80px);
-    overflow: hidden;
 }
 
 /* Nav main */
@@ -111,8 +141,7 @@ main{
     flex-direction: column;
     float: left;
     width: 200px;
-    min-height: 300px;
-    overflow: hidden;
+    min-height: 400px;
     background-color: black;
 }
 
@@ -163,10 +192,13 @@ main{
     border-left: 3px solid #a1ee2f;
 }
 
+.nav-actions a:hover img{
+    filter: invert(0);
+}
+
 /* Playlists */
 .playlists{
     flex-grow: 1;
-    overflow: hidden;
     padding-top: 10px;
 }
 
@@ -186,6 +218,10 @@ main{
     margin-right: 5px;
 }
 
+.plus:hover i{
+    background-color: white;
+}
+
 .playlists-name{
     overflow-y: auto;
     height: 70%;
@@ -197,6 +233,10 @@ main{
     margin-right: 15px;
     padding-bottom: 7px;
     border-bottom: 1px solid grey;
+}
+
+.install-app a:hover img{
+    filter: invert(0);
 }
 
 .username{
@@ -263,6 +303,10 @@ main{
     padding: 20px;
 }
 
+.recently-played h2{
+    padding-bottom: 20px;
+}
+
 .recently-music{
     display: flex;
     justify-content: space-around;
@@ -274,13 +318,34 @@ main{
     text-align: center;
 }
 
-.recently-content .singer{
-    padding-top: 10px;
+.recently-content h3{
+    padding-top: 20px;
 }
 
-.recently-content img, 
-.music-content img{
-    padding: 20px 0;
+.recently-content .singer{
+    padding: 10px 0;
+}
+
+.content-img {
+    position: relative;
+}
+
+.content-img img{
+    display: block;
+}
+
+.recently-content:hover .overlay,
+.music-content:hover .overlay{
+    display: block;
+}
+
+.play-overlay{
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 /* Create for and Popular artists */
@@ -293,7 +358,7 @@ main{
 
 .music-content{
     width: calc( (100% / 2) - 10px);
-    padding-right: 10px;
+    margin-right: 10px;
     text-align: center;
 }
 
@@ -305,10 +370,12 @@ main{
 .create-for p,
 .popular-artists p{
     padding-top: 10px;
+    padding-bottom: 20px;
 }
 
-.br-radius{
-    border-radius: 50%;
+.create-for h3,
+.popular-artists h3{
+    padding-top: 20px;
 }
 
 @media screen and (max-width:700px) {
@@ -390,8 +457,14 @@ main{
         display: none;
     }
 
+    /* User and install */
+    .user-and-install{
+        padding: 0;
+    }
+
     .install-app{
         border: none;
+        margin-right: 0;
     }
 
     /* Recently played */
@@ -403,22 +476,17 @@ main{
 
 /* FOOTER */
 footer{
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
     background-color: #282828;
 }
 
-footer h3{
+footer h4{
     font-size: 12px;
 }
 
 /* Song footer */
 .song-footer{
-    display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .song-footer img{
@@ -443,8 +511,6 @@ footer h3{
 }
 
 .multimedia-footer ul{
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -459,8 +525,6 @@ footer h3{
 }
 
 .multimedia-line{
-    display: flex;
-    align-items: center;
     padding-top: 10px;
 }
 
@@ -480,9 +544,6 @@ footer h3{
 
 /* Screen and audio options */
 .screen-and-audio-options{
-    /* width: 10%; */
-    display: flex;
-    align-items: center;
     padding-right: 10px;
 }
 
