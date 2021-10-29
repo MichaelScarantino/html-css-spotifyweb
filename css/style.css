@@ -8,7 +8,7 @@
 /* COMMON */
 body{
     font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     color: white;
 }
 
@@ -35,11 +35,11 @@ body{
 
 /* Text */
 h2{
-    font-size: 25px;
+    font-size: 40px;
 }
 
 h3{
-    font-size: 14px;
+    font-size: 25px;
 }
 
 /* Link decorations */
@@ -185,7 +185,6 @@ main{
 /* Nav actions */
 .nav-actions{
     margin-top: 10px;
-    font-size: 12px;
 }
 
 .nav-actions ul li{
@@ -212,7 +211,6 @@ main{
 
 .create-playlist{
     padding: 10px 0;
-    font-size: 12px;
 }
 
 .plus i{
@@ -344,7 +342,7 @@ main{
 }
 
 .play-overlay{
-    font-size: 50px;
+    font-size: 70px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -484,10 +482,13 @@ main{
 footer{
     justify-content: space-between;
     background-color: #282828;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 footer h4{
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* Song footer */
@@ -501,7 +502,7 @@ footer h4{
 }
 
 .piece-name .clr-grey{
-    font-size: 10px;
+    font-size: 14px;
     padding-right: 30px;
 }
 
@@ -544,6 +545,9 @@ footer h4{
 
 .multimedia-line{
     padding-top: 10px;
+}
+.time-line{
+    font-size: 14px;
 }
 
 .line-duration{
